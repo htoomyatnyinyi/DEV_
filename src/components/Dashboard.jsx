@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { get_data } from "../redux/ducks/getDataSlice";
+import FileUpload from "./extra/FileUpload";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,10 @@ const Dashboard = () => {
 
   return (
     <div className="block">
+      {/* <div className="bg-green-300 p-2 rounded-md">
+        <h3>Main Sections</h3>
+      </div> */}
+      <FileUpload />
       <div className="bg-slate-500 p-2 rounded-md">
         <h3 className="align-self-start">DASHBOARD</h3>
         <div>
@@ -51,9 +56,6 @@ const Dashboard = () => {
             );
           })}
         </div>
-      </div>
-      <div className="bg-green-300 p-2 rounded-md">
-        <h3>Main Sections</h3>
       </div>
     </div>
   );
